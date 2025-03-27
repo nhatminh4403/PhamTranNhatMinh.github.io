@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <title>Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -51,11 +54,15 @@
                 </div>
                 <div class="about-text">
                     <h3>Who am I?</h3>
-                    <p>I'm a passionate web developer and designer with 5+ years of experience creating responsive, user-friendly websites and applications. With a background in both design and development, I bring a unique perspective to every project.</p>
-                    
+                    <p>I'm a passionate web developer and designer with 5+ years of experience creating responsive,
+                        user-friendly websites and applications. With a background in both design and development, I
+                        bring a unique perspective to every project.</p>
+
                     <h3>My Approach</h3>
-                    <p>I believe in creating clean, efficient, and accessible digital solutions that not only look great but also provide an exceptional user experience. Every line of code I write and every design element I create serves a purpose.</p>
-                    
+                    <p>I believe in creating clean, efficient, and accessible digital solutions that not only look great
+                        but also provide an exceptional user experience. Every line of code I write and every design
+                        element I create serves a purpose.</p>
+
                     <div class="personal-info">
                         <div class="info-item">
                             <span class="info-label">Name:</span>
@@ -74,7 +81,7 @@
                             <span class="info-text">Freelance & Full-time</span>
                         </div>
                     </div>
-                    
+
                     <a href="#" class="btn primary-btn">Download Resume</a>
                 </div>
             </div>
@@ -120,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3>Design</h3>
                     <div class="skill-items">
@@ -153,7 +160,52 @@
             </div>
         </div>
     </section>
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
 
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWU00000L82AD"
+        method="POST">
+
+        <input type=hidden name="oid" value="00DWU00000L82AD">
+        <input type=hidden name="retURL" value="http://">
+
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail"                                  -->
+        <!--  value="nhatminh4403@gmail.com">                                         -->
+        <!--  ----------------------------------------------------------------------  -->
+
+        <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20"
+            type="text" /><br>
+
+        <label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20"
+            type="text" /><br>
+
+        <label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+        <label for="company">Company</label><input id="company" maxlength="40" name="company" size="20"
+            type="text" /><br>
+
+        <label for="city">City</label><input id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+        <label for="state">State/Province</label><input id="state" maxlength="20" name="state" size="20"
+            type="text" /><br>
+
+        <label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+        <input type="submit" name="submit">
+
+    </form>
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="section-title">My Portfolio</h2>
@@ -234,8 +286,9 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
-                    <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
-                    
+                    <p>Feel free to reach out if you're looking for a developer, have a question, or just want to
+                        connect.</p>
+
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -259,7 +312,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -267,7 +320,7 @@
                         <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <h3>Send a Message</h3>
                     <form>
@@ -298,20 +351,20 @@
 
     <script>
         // Simple JavaScript for portfolio filtering
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
+
             filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     // Remove active class from all buttons
                     filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
+
                     // Add active class to clicked button
                     this.classList.add('active');
-                    
+
                     const filterValue = this.getAttribute('data-filter');
-                    
+
                     portfolioItems.forEach(item => {
                         if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                             item.style.display = 'block';
@@ -324,4 +377,5 @@
         });
     </script>
 </body>
+
 </html>
